@@ -1,188 +1,331 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Manish Rengasamy</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+    <title>Manish Rengasamy | portfolio</title>
+    <link rel="apple-touch-icon" sizes="192x190" href="/images/favicon_io/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/android-chrome-192x192.png">
 
-<body>
-    <header class="header">
-        <a href="#" class="logo"><Manish/></a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#Skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact Me</a>
-        </nav>
-        <i class='bx bx-menu' id="menu"></i>
-    </header>
-    <section class="home" id="home">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-        <div class="text-content">
-            <h2>Manish_Rengasamy<h2>
-            <h5>Website Developer</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nihil illum, ad blanditiis ea autem enim,
-                culpa quod et ipsum ex eum labore mollitia, porro ut odio sequi in. Ea!</p>
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    
+<!--   -->
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Manish Rengasamy</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                      </div>
+                    </div>
+                </ul>
             </div>
-            <button class="btn">Downlaod C.V</button>
         </div>
-        <div class="cover">
-            <div class="image"></div>
-            <div class="layout"></div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">My portfolio website!</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey Dude, I'm</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Manish Rengasamy</span>
+                                    <span class="animated-item">Web Page Builder</span>
+                                    <span class="animated-item">Personal Website Manager </span>
+                                </div>
+                        </h1>
+
+                        <p>I am a freelance web developer with expertise in HTML, CSS, and Wordpress, helping businesses build professional and resposive websites.</p>
+                        
+                        <div class="custom-btn-group mt-4">
+                          <a href="/Manish Rengasamy Resume.pdf" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
+                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
-    <section class="about" id="about">
-        <div class="image-cover">
 
-            <div class="img">
-                <h2>Manish_Rengasamy</h2>
-                <h5>Website Developer</h5>
-                <img src="profile.jpg" alt="">
-            </div>
+    <!-- PROJECTS -->
+    <section class="project py-5" id="project">
+        <div class="container">
+                
+                <div class="row">
+                  <div class="col-lg-11 text-center mx-auto col-12">
+
+                      <div class="col-lg-8 mx-auto">
+                        <h3>Things I have Build for Portfolio & Service Websites</h3>
+                      </div>
+
+                      <div class="owl-carousel owl-theme">
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image02.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image03.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image04.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image05.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
         </div>
-        <div class="about-text">
-            <h3 class="title"><i class='bx bx-user'></i>ABOUT ME</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita fugit iste, iusto, nobis asperiores in
-                voluptas, sapiente reiciendis placeat error doloribus ex iure natus id mollitia debitis tempora alias
-                ipsam nam obcaecati recusandae? Illo culpa, tenetur voluptatibus maxime sed animi, iure similique amet
-                laborum ea quidem ipsum excepturi. Exercitationem, ratione sed. Magnam, iste excepturi. Quaerat optio
-                quas odit nemo magnam.</p>
-            <button class="btn">Read More</button>
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Professinal Experiences</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2020</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Assistent Operation Manager</span><small>Deccan Web Assets.Pvt Ltd - Banglore (hybrid)</small></h3>
+                                  <p>Proin ornare non purus ut rutrum. Nulla facilisi. Aliquam laoreet libero ac pharetra feugiat. Cras ac fermentum nunc, a faucibus nunc.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2018</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Operation Staff</span><small>Deccan Web Assets Pvt.Ltd-Chennai</small></h3>
+                                <p>Fusce rutrum augue id orci rhoncus molestie. Nunc auctor dignissim lacus vel iaculis.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2016</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Senior Game QA Teaster<small>Deccan Web Assets Pvt.Ltd-Chennai</small></h3>
+                                <p>Sed fringilla vitae enim sit amet cursus. Sed cursus dictum tortor quis pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2015</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Junior Game QA Teaster<small>Deccan Web Assets Pvt.Ltd-Chennai</small></h3>
+                                <p>Cras scelerisque scelerisque condimentum. Nullam at volutpat mi. Nunc auctor ipsum eget magna consequat viverra.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">Freelance Projects</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2023</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Banglore Power</span><small>Bangalore,Karnataka</small></h3>
+                                  <p>Please tell your friends about Tooplate website. That would be very helpful. We need your support.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Banglore Power</span><small>Banglore,Karnataka</small></h3>
+                                <p>Manish is a great website to download HTML templates without any login or email.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2020</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Cauvery Law Firm</span><small>Madurai,Tamilnadu</small></h3>
+                                <p>You can freely use Tooplate's templates for your business or personal sites. You cannot redistribute this template without a permission.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2020</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Cauvery Law Firm</span><small>Madurai,Tamilnadu</small></h3>
+                              <p>You can freely use Tooplate's templates for your business or personal sites. You cannot redistribute this template without a permission.</p>
+                          </div>
+                      </div>
+
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
-    <section class="Skills" id="Skills">
-        <h3 class="title"><i class='bx bx-user'></i>SKILLS</h3>
-        <div class="skill-container">
-            <div class="skills-content">
-                <i class='bx bx-code-alt'></i>
-                <h5>Web Developer</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque provident beatae voluptatum est, et
-                    reprehenderit.</p>
-                <button class="btn">Read More</button>
-            </div>
-            <div class="skills-content">
-                <i class='bx bx-signal-5'></i>
-                <h5>Web Developer</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque provident beatae voluptatum est, et
-                    reprehenderit.</p>
-                <button class="btn">Read More</button>
-            </div>
-            <div class="skills-content">
-                <i class='bx bxl-adobe'></i>
-                <h5>Web Developer</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque provident beatae voluptatum est, et
-                    reprehenderit.</p>
-                <button class="btn">Read More</button>
-            </div>
-        </div>
-    </section>
-    <section class="education" id="education">
-        <h3 class="title"><i class='bx bx-book-open'></i>EDUCATION</h3>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
         <div class="row">
-            <div class="column">
-                <div class="education-content">
-                    <div class="year"><i class='bx bx-time'></i>2020-2021</div>
-                    <h2>Mumbai University</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sunt sequi veniam ipsam corrupti,
-                        omnis facere explicabo hic illo debitis.</p>
-                </div>
-                <div class="education-content">
-                    <div class="year"><i class='bx bx-time'></i>2020-2021</div>
-                    <h2>Mumbai University</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sunt sequi veniam ipsam corrupti,
-                        omnis facere explicabo hic illo debitis.</p>
-                </div>
-                <div class="education-content">
-                    <div class="year"><i class='bx bx-time'></i>2020-2021</div>
-                    <h2>Mumbai University</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sunt sequi veniam ipsam corrupti,
-                        omnis facere explicabo hic illo debitis.</p>
-                </div>
+          
+          <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16595834.96669724!2d72.67403056915595!3d12.036686017239232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50ff2aecdad%3A0x6de02c3bedbbaea6!2sTiruchirappalli%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1729750019673!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-            <div class="column">
-                <div class="education-content">
-                    <div class="year"><i class='bx bx-time'></i>2020-2021</div>
-                    <h2>Mumbai University</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sunt sequi veniam ipsam corrupti,
-                        omnis facere explicabo hic illo debitis.</p>
-                </div>
-                <div class="education-content">
-                    <div class="year"><i class='bx bx-time'></i>2020-2021</div>
-                    <h2>Mumbai University</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sunt sequi veniam ipsam corrupti,
-                        omnis facere explicabo hic illo debitis.</p>
-                </div>
-                <div class="education-content">
-                    <div class="year"><i class='bx bx-time'></i>2020-2021</div>
-                    <h2>Mumbai University</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sunt sequi veniam ipsam corrupti,
-                        omnis facere explicabo hic illo debitis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <h2 class="title"><i class='bx bx-headphone'></i>CONTACT ME</h2>
-        <form action="#" id="">
-            <div class="input-box">
-                <input type="text" required placeholder="Full Name">
-                <input type="email" required placeholder="Email">
-            </div>
-            <div class="input-box">
-                <input type="tel" required placeholder="Mobile Number">
-                <input type="email" required placeholder="Subject For">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
-    <footer>
-        <div class="text">
-            <p>Copyright @ 2024 by Mansih Rengasamy</p>
-        </div>
-       <a href="#"> <i class='bx bx-up-arrow-alt'></i></a>
-    </footer>
-    <script>
-        const menubar = document.querySelector('#menu');
-const Navbar = document.querySelector('.navbar');
-menubar.onclick=()=>{
-    menubar.classList.toggle('bx-x');
-    Navbar.classList.toggle('active')
-}
-const section=document.querySelectorAll('section');
-const navlink = document.querySelectorAll('header nav a')
-window.onscroll = ()=>{
-    section.forEach(sec=>{
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id')
-        if(top>offset && top < offset + height){
-            sec.classList.add('start-animation');
-            navlink.forEach(links=>{
-                links.classList.remove('active')
-                document.querySelector('header nav a[href*='+id+']').classList.add('active')
-              
-            })
-        }
-    })
-    var header = document.querySelector('.header');
-    header.classList.toggle('sticky',window.scrollY>100)
-    menubar.classList.remove('bx-x');
-    Navbar.classList.remove('active')
-}
 
-    </script>
-</body>
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <p class="footer-text mb-0">+91 9659859106</p>
+                  <p><a href="mailto:hello@company.co">manishrengasamy@gmail.com</a></p>
+                </div>
 
+                <ul class="social-links">
+                     <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a></li>
+                     <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+                     <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+              <form action="" method="get">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="ml-lg-auto col-lg-5 col-12">
+                    <input type="submit" class="form-control submit-btn" value="Send Button">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2014-2024 Manish_Rengasamy . All rights reserved</p>
+                        <p class="copyright-text text-center">Developed by <a rel="nofollow" href="https://manish-rengasamy.github.io/">Manish Rengasamy</a></p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
 </html>
