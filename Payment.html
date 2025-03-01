@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .payment-btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .payment-btn:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Pay Now</h2>
+    <button class="payment-btn" onclick="makePayment()">Pay ₹500</button>
+
+    <script>
+        function makePayment() {
+            var options = {
+                "key": "YOUR_RAZORPAY_KEY",  // Replace with your actual Razorpay API key
+                "amount": 50000, // Amount in paisa (50000 paisa = ₹500)
+                "currency": "INR",
+                "name": "Your Name or Business",
+                "description": "Payment for Services",
+                "image": "https://yourwebsite.com/logo.png", // Replace with your logo
+                "handler": function (response) {
+                    alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+                },
+                "prefill": {
+                    "name": "Client Name",
+                    "email": "client@example.com",
+                    "contact": "9876543210"
+                },
+                "theme": {
+                    "color": "#008CBA"
+                }
+            };
+            var rzp = new Razorpay(options);
+            rzp.open();
+        }
+    </script>
+
+</body>
+</html>
