@@ -150,14 +150,14 @@
     <script>
         function makePayment(amount, planName) {
             var options = {
-                "key": "YOUR_RAZORPAY_KEY_ID", 
+                "key": "rzp_test_ZtiEuU6g21s8PN", 
                 "amount": amount * 100, // Convert to paise
                 "currency": "INR",
                 "name": "Your Portfolio",
                 "description": planName + " - Payment",
                 "image": "assets/logo.png",
                 "handler": function (response) {
-                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                    alert("Payment Successful! Payment ID: " + response.rzp_test_ZtiEuU6g21s8PN);
                 },
                 "prefill": {
                     "name": "Manish Rengasamy",
