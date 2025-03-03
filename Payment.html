@@ -150,14 +150,14 @@
     <script>
         function makePayment(amount, planName) {
             var options = {
-                "key": "rzp_test_ZtiEuU6g21s8PN", 
+                "key": "rzp_live_m2FKMnrh6RUpXS", 
                 "amount": amount * 100, // Convert to paise
                 "currency": "INR",
                 "name": "Your Portfolio",
                 "description": planName + " - Payment",
                 "image": "assets/logo.png",
                 "handler": function (response) {
-                    alert("Payment Successful! Payment ID: " + response.rzp_test_ZtiEuU6g21s8PN);
+                    alert("Payment Successful! Payment ID: " + response.rzp_live_m2FKMnrh6RUpXS);
                 },
                 "prefill": {
                     "name": "Manish Rengasamy",
