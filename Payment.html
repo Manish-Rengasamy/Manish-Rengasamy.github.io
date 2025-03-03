@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
     <link rel="apple-touch-icon" sizes="192x190" href="/images/favicon_io/android-chrome-512x512.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/android-chrome-512x512.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/android-chrome-192x192.png">
@@ -15,8 +14,70 @@
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
-    
+    <title>Payment Plans</title>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card h2 {
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .price del {
+            color: red;
+            font-size: 16px;
+        }
+        .pay-btn {
+            background: #009688;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .ask-btn {
+            background: #ff9800;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .pay-btn:hover, .ask-btn:hover {
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     
@@ -60,12 +121,65 @@
     </nav>
 
 
-    <h1>Make an Advance Payment</h1>
+
+    <h1>Choose Your Plan</h1>
+
+    <div class="container">
+        <!-- Portfolio Website -->
+        <div class="card">
+            <h2>Portfolio Website</h2>
+            <p class="price"><del>₹499</del> <strong>₹1</strong></p>
+            <button class="pay-btn" onclick="makePayment(1, 'Portfolio Website')">Pay Now</button>
+        </div>
+
+        <!-- Landing Page -->
+        <div class="card">
+            <h2>Landing Page</h2>
+            <p class="price"><del>₹1499</del> <strong>₹499</strong></p>
+            <button class="pay-btn" onclick="makePayment(499, 'Landing Page')">Pay Now</button>
+        </div>
+
+        <!-- E-commerce Website -->
+        <div class="card">
+            <h2>E-commerce Website</h2>
+            <p class="price"><strong>Ask for Price</strong></p>
+            <button class="ask-btn" onclick="askForPrice()">Ask for Price</button>
+        </div>
+    </div>
+
+    <script>
+        function makePayment(amount, planName) {
+            var options = {
+                "key": "YOUR_RAZORPAY_KEY_ID", 
+                "amount": amount * 100, // Convert to paise
+                "currency": "INR",
+                "name": "Your Portfolio",
+                "description": planName + " - Payment",
+                "image": "assets/logo.png",
+                "handler": function (response) {
+                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                },
+                "prefill": {
+                    "name": "Manish Rengasamy",
+                    "email": "manishrengasamy@email.com",
+                    "contact": "9659859106"
+                },
+                "theme": {
+                    "color": "#009688"
+                }
+            };
+
+            var rzp = new Razorpay(options);
+            rzp.open();
+        }
+
+        function askForPrice() {
+            window.location.href = "https://api.whatsapp.com/send?phone=919659859106&text=Hi,%20I%20want%20to%20know%20the%20price%20for%20E-commerce%20Website!";
+        }
+    </script>
+
+
     
-    <label for="amount">Enter Amount (₹):</label>
-    <input type="number" id="amount" placeholder="Enter amount" min="1" required>
-    
-    <button id="payButton">Pay Now</button>
      <!-- FOOTER -->
      <footer class="footer py-5">
           <div class="container">
@@ -90,39 +204,7 @@
     <script src="js/custom.js"></script>
 
 
-    <script>
-        document.getElementById('payButton').addEventListener('click', function () {
-            let amount = document.getElementById("amount").value;
-            
-            if (!amount || amount <= 0) {
-                alert("Please enter a valid amount!");
-                return;
-            }
-
-            var options = {
-                "key": "rzp_test_yNO6FPNHUkaKll", 
-                "amount": amount * 100, // Convert to paise
-                "currency": "INR",
-                "name": "Your Portfolio",
-                "description": "Advance Payment",
-                "image": "assets/logo.png",
-                "handler": function (response) {
-                    alert("Payment Successful! Payment ID: " + response.rzp_test_yNO6FPNHUkaKll);
-                },
-                "prefill": {
-                    "name": "Manish Rengasamy",
-                    "email": "your@email.com",
-                    "contact": "9659859106"
-                },
-                "theme": {
-                    "color": "#009688"
-                }
-            };
-
-            var rzp = new Razorpay(options);
-            rzp.open();
-        });
-    </script>
+   
 
 </body>
 </html>
