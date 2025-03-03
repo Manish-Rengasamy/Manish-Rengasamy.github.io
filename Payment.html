@@ -100,14 +100,14 @@
             }
 
             var options = {
-                "key": "YOUR_RAZORPAY_KEY_ID", 
+                "key": "rzp_test_yNO6FPNHUkaKll", 
                 "amount": amount * 100, // Convert to paise
                 "currency": "INR",
                 "name": "Your Portfolio",
                 "description": "Advance Payment",
                 "image": "assets/logo.png",
                 "handler": function (response) {
-                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                    alert("Payment Successful! Payment ID: " + response.rzp_test_yNO6FPNHUkaKll);
                 },
                 "prefill": {
                     "name": "Manish Rengasamy",
