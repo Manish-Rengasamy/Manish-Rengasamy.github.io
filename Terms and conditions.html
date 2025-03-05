@@ -97,26 +97,29 @@
     </div>
 
     <script>
-        // Show popup when page loads
-        window.onload = function() {
+        // Function to show popup
+        function showPopup() {
             document.getElementById("popup").classList.add("show-popup");
-        };
+        }
 
-        // Hide popup when clicking "Accept"
+        // Function to accept terms
         function acceptTerms() {
-            document.getElementById("popup").classList.remove("show-popup");
-            localStorage.setItem("termsAccepted", "true"); // Save preference
+            localStorage.setItem("termsAccepted", "true");
+            window.location.reload(); // Reload the page
         }
 
-        // Hide popup when clicking "Close"
+        // Function to close popup
         function closePopup() {
-            document.getElementById("popup").classList.remove("show-popup");
+            localStorage.setItem("termsAccepted", "true");
+            window.location.reload(); // Reload the page
         }
 
-        // Prevent showing the popup again if already accepted
-        if (localStorage.getItem("termsAccepted") === "true") {
-            document.getElementById("popup").style.display = "none";
-        }
+        // Show popup only if terms are not accepted
+        window.onload = function() {
+            if (!localStorage.getItem("termsAccepted")) {
+                showPopup();
+            }
+        };
     </script>
 
 </body>
