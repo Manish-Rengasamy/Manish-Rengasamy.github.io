@@ -94,29 +94,13 @@
     </div>
 
     <script>
-        // Function to show popup
-        function showPopup() {
-            document.getElementById("popup").classList.add("show-popup");
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("popup").classList.add("show-popup"); // Show popup every time
+        });
 
-        // Function to accept terms
-        function acceptTerms() {
-            localStorage.setItem("termsAccepted", "true");
-            window.location.reload(); // Reload the page
-        }
-
-        // Function to close popup
         function closePopup() {
-            localStorage.setItem("termsAccepted", "true");
-            window.location.reload(); // Reload the page
+            document.getElementById("popup").classList.remove("show-popup");
         }
-
-        // Show popup only if terms are not accepted
-        window.onload = function() {
-            if (!localStorage.getItem("termsAccepted")) {
-                showPopup();
-            }
-        };
     </script>
 
 </body>
