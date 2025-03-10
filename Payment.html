@@ -124,59 +124,148 @@
 
     <h1>Choose Your Plan</h1>
 
-    <div class="container">
-        <!-- Portfolio Website -->
-        <div class="card">
-            <h2>Portfolio Website</h2>
-            <p class="price"><del>₹499</del> <strong>₹1</strong></p>
-            <button class="pay-btn" onclick="makePayment(1, 'Portfolio Website')">Pay Now</button>
-        </div>
-
-        <!-- Landing Page -->
-        <div class="card">
-            <h2>Landing Page Website</h2>
-            <p class="price"><del>₹1499</del> <strong>₹499</strong></p>
-            <button class="pay-btn" onclick="makePayment(499, 'Landing Page')">Pay Now</button>
-        </div>
-
-        <!-- E-commerce Website -->
-        <div class="card">
-            <h2>E-commerce Website</h2>
-            <p class="price"><strong>Ask for Price</strong></p>
-            <button class="ask-btn" onclick="askForPrice()">Ask for Price</button>
-        </div>
+<div class="container">
+    <!-- Portfolio Website -->
+    <div class="card">
+        <h2>Portfolio Website</h2>
+        <p class="price"><del>₹499</del> <strong>₹1</strong></p>
+        <button class="pay-btn" onclick="openPaymentPopup(1, 'Portfolio Website')">Pay Now</button>
     </div>
 
-    <script>
-        function makePayment(amount, planName) {
-            var options = {
-                "key": "rzp_live_m2FKMnrh6RUpXS", 
-                "amount": amount * 100, // Convert to paise
-                "currency": "INR",
-                "name": "Your Portfolio",
-                "description": planName + " - Payment",
-                "image": "assets/logo.png",
-                "handler": function (response) {
-                    alert("Payment Successful! Payment ID: " + response.rzp_live_m2FKMnrh6RUpXS);
-                },
-                "prefill": {
-                    "name": "Manish Rengasamy",
-                    "email": "manishrengasamy@email.com",
-                    "contact": "9659859106"
-                },
-                "theme": {
-                    "color": "#009688"
-                }
-            };
+    <!-- Landing Page -->
+    <div class="card">
+        <h2>Landing Page Website</h2>
+        <p class="price"><del>₹1499</del> <strong>₹499</strong></p>
+        <button class="pay-btn" onclick="openPaymentPopup(499, 'Landing Page')">Pay Now</button>
+    </div>
 
-            var rzp = new Razorpay(options);
-            rzp.open();
-        }
+    <!-- E-commerce Website -->
+    <div class="card">
+        <h2>E-commerce Website</h2>
+        <p class="price"><strong>Ask for Price</strong></p>
+        <button class="ask-btn" onclick="askForPrice()">Ask for Price</button>
+    </div>
+</div>
 
-        function askForPrice() {
-            window.location.href = "https://api.whatsapp.com/send?phone=919659859106&text=Hi,%20I%20want%20to%20know%20the%20price%20for%20E-commerce%20Website!";
-        }
-    </script>
+<!-- Payment Popup -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <h3>Select a Payment Method</h3>
+        <button class="payu-btn" onclick="payWithPayU()">Pay with PayU</button>
+        <button class="razorpay-btn" onclick="payWithRazorpay()">Pay with Razorpay</button>
+        <button class="close-btn" onclick="closePaymentPopup()">Cancel</button>
+    </div>
+</div>
+
+<script>
+    let selectedAmount, selectedPlan;
+
+    function openPaymentPopup(amount, planName) {
+        selectedAmount = amount;
+        selectedPlan = planName;
+        document.getElementById("paymentModal").style.display = "block";
+    }
+
+    function closePaymentPopup() {
+        document.getElementById("paymentModal").style.display = "none";
+    }
+
+    function payWithPayU() {
+        closePaymentPopup();
+        window.location.href = "https://pmny.in/PAYUMN/UrzRmC1779O1";
+    }
+
+    function payWithRazorpay() {
+        closePaymentPopup();
+
+        var options = {
+            "key": "rzp_live_m2FKMnrh6RUpXS",
+            "amount": selectedAmount * 100, // Convert to paise
+            "currency": "INR",
+            "name": "Your Portfolio",
+            "description": selectedPlan + " - Payment",
+            "image": "assets/logo.png",
+            "handler": function (response) {
+                alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+            },
+            "prefill": {
+                "name": "Manish Rengasamy",
+                "email": "manishrengasamy@email.com",
+                "contact": "9659859106"
+            },
+            "theme": {
+                "color": "#009688"
+            }
+        };
+
+        var rzp = new Razorpay(options);
+        rzp.open();
+    }
+
+    function askForPrice() {
+        window.location.href = "https://api.whatsapp.com/send?phone=919659859106&text=Hi,%20I%20want%20to%20know%20the%20price%20for%20E-commerce%20Website!";
+    }
+</script>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+    /* Modal Styling */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: white;
+        margin: 20% auto;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content h3 {
+        margin-bottom: 20px;
+    }
+
+    .payu-btn, .razorpay-btn, .close-btn {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .payu-btn {
+        background-color: #ff9800;
+        color: white;
+    }
+
+    .razorpay-btn {
+        background-color: #009688;
+        color: white;
+    }
+
+    .close-btn {
+        background-color: #ccc;
+        color: black;
+    }
+
+    .payu-btn:hover, .razorpay-btn:hover, .close-btn:hover {
+        opacity: 0.8;
+    }
+</style>
+
 
 
     
