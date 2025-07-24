@@ -1,165 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="google-adsense-account" content="ca-pub-1384774411594272">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Contact Me | Manish Rengasamy</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Manish Rengasamy</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    /* Header */
+    .header {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="192x190" href="/images/favicon_io/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/android-chrome-192x192.png">
+    /* Contact Section */
+    .contact-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .contact-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .contact-section p.description {
+      text-align: center;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #222;
+    }
+    .card a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/unicons.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="css/tooplate-style.css">
+    .response-note {
+      margin-top: 40px;
+      text-align: center;
+      font-style: italic;
+      color: #444;
+    }
 
-    <style>
-      .contact-section .card {
-        border: 1px solid #eee;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 30px;
-        transition: all 0.3s ease-in-out;
-      }
-      .contact-section .card:hover {
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transform: translateY(-5px);
-      }
-      .contact-section ul {
-        list-style: none;
-        padding-left: 0;
-      }
-      .contact-section a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
+    /* Footer */
+    .footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+    .footer p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
 
-  <body>
+  <!-- Original Header -->
+  <div class="header">
+    <h1>Manish Rengasamy</h1>
+    <p>Web Developer | Front-End Specialist</p>
+  </div>
 
-    <!-- HEADER / NAV -->
-    <nav class="navbar navbar-expand-sm navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Manish Rengasamy</a>
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <h2>📬 Contact Me</h2>
+    <p class="description">Feel free to reach out through any of the methods below. I'm always open to work, collaboration, and ideas!</p>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a href="About.html" class="nav-link"><span data-hover="About">About</span></a></li>
-            <li class="nav-item"><a href="Projects.html" class="nav-link"><span data-hover="Projects">Projects</span></a></li>
-            <li class="nav-item"><a href="Resume.html" class="nav-link"><span data-hover="Resume">Resume</span></a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a></li>
-          </ul>
-
-          <ul class="navbar-nav ml-lg-auto">
-            <div class="ml-lg-4">
-              <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                <i class="color-mode-icon"></i>
-              </div>
-            </div>
-          </ul>
-        </div>
+    <div class="contact-grid">
+      <!-- Email Card -->
+      <div class="card">
+        <h3>📧 Email</h3>
+        <p>manishrengasamy@gmail.com</p>
       </div>
-    </nav>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact-section py-5" id="contact">
-      <div class="container">
-        <h2 class="text-center mb-4"><i class="uil uil-envelope-edit"></i> Contact Me</h2>
-        <p class="text-center mb-5">Have questions, feedback, or want to collaborate? Feel free to reach out!</p>
-
-        <div class="row justify-content-center">
-
-          <!-- Email -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 text-center">
-              <h5>📧 Email</h5>
-              <p>manishrengasamy@gmail.com</p>
-              <a href="mailto:manishrengasamy@gmail.com" class="btn btn-primary btn-sm">Send Email</a>
-            </div>
-          </div>
-
-          <!-- Phone / WhatsApp -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 text-center">
-              <h5>📱 Call / WhatsApp</h5>
-              <p>Mobile: <a href="tel:+919659859106">+91 96598 59106</a></p>
-              <a href="https://wa.me/919659859106" target="_blank" class="btn btn-success btn-sm">Message on WhatsApp</a>
-            </div>
-          </div>
-
-          <!-- Location -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 text-center">
-              <h5>📍 Location</h5>
-              <p>Tiruchirappalli, Tamil Nadu, India</p>
-              <iframe class="w-100" height="200" frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16595834.96669724!2d72.67403056915595!3d12.036686017239232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50ff2aecdad%3A0x6de02c3bedbbaea6!2sTiruchirappalli%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1729750019673!5m2!1sen!2sin"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-
-          <!-- Social Media -->
-          <div class="col-md-6 col-lg-6">
-            <div class="card h-100">
-              <h5 class="text-center">🌐 Connect with Me</h5>
-              <ul class="mt-3 text-center">
-                <li>LinkedIn: <a href="https://linkedin.com/in/manishrengasamy" target="_blank">Manish Rengasamy</a></li>
-                <li>GitHub: <a href="https://github.com/Manish-Rengasamy" target="_blank">Manish-Rengasamy</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="text-center mt-4">
-          <p>⏱️ I usually respond within <strong>1–2 hours</strong>.</p>
-          <p>Thanks for reaching out! 🚀</p>
-        </div>
+      <!-- Phone / WhatsApp Card -->
+      <div class="card">
+        <h3>📱 Call or WhatsApp</h3>
+        <p><strong>Phone:</strong> <a href="tel:+919659859106">+91 96598 59106</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919659859106" target="_blank">Chat Now</a></p>
       </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-12 text-center">
-            <p class="copyright-text">Copyright &copy; 2014-2025 Manish_Rengasamy. All rights reserved</p>
-            <p class="copyright-text">
-              <a rel="nofollow" href="Terms and conditions.html">Terms & Conditions</a> |
-              <a rel="nofollow" href="Privacy Policy.HTML">Privacy Policy</a> |
-              <a rel="nofollow" href="Refund Policy.html">Refund Policy</a>
-            </p>
-            <p class="copyright-text">Developed by
-              <a rel="nofollow" href="https://www.linkedin.com/in/manish-rengasamy/">Manish Rengasamy</a>
-            </p>
-          </div>
-        </div>
+      <!-- Location Card -->
+      <div class="card">
+        <h3>📍 Location</h3>
+        <p>Tiruchirappalli, Tamil Nadu, India</p>
+        <p>Remote friendly & flexible for virtual meetings.</p>
       </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
+      <!-- Social Links Card -->
+      <div class="card">
+        <h3>🌐 Social Media</h3>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/manishrengasamy" target="_blank">linkedin.com/in/manishrengasamy</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Manish-Rengasamy" target="_blank">github.com/Manish-Rengasamy</a></p>
+      </div>
+    </div>
+
+    <p class="response-note">⏱️ I usually respond within 1-2 hours on business days.</p>
+  </div>
+
+  <!-- Original Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Manish Rengasamy. All Rights Reserved.</p>
+  </div>
+
+</body>
 </html>
